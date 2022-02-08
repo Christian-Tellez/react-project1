@@ -8,9 +8,10 @@ const Expenses = (props) => {
       {props.items.map((value, index) => {
         return (
           <ExpenseItem
-            title={props.items[0].title}
-            amount={props.items[0].amount}
-            date={props.items[0].date}
+            key={props.items[index].id}
+            title={props.items[index].title}
+            amount={props.items[index].amount}
+            date={props.items[index].date}
           />
         );
       })}
